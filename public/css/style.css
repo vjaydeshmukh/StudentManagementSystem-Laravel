@@ -1,0 +1,463 @@
+@font-face {
+    font-family: Righteous-Regular;
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    font-family: Righteous-Regular;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    font-size: 20px !important;
+}
+
+.header-container {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.carousel-item {
+    height: 100%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0px;
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    margin-top: 60px !important;
+    font-size: 30px !important;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5em;
+    font-family: Righteous-Regular;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-caption p {
+    font-size: 1em;
+}
+
+.carousel-caption span {
+    color: #edbb00;
+}
+
+.carousel-caption a {
+    background: #edbb00;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 15px;
+    /* color: #fff; */
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.carousel-caption a:hover {
+    text-decoration: none;
+    background-color: #ffcd06;
+    color: white;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+@media (min-width: 320px) {
+    .carousel-caption h5 {
+        font-size: 0.7em;
+    }
+
+    .carousel-caption p {
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 0.9em;
+    }
+
+    .carousel-caption p {
+        font-size: 0.7em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.1em;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-caption h5 {
+        font-size: 1.3em;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-caption h5 {
+        font-size: 1.5em;
+    }
+
+    .carousel-caption p {
+        font-size: 1em;
+    }
+}
+
+.bg-light {
+
+    background: #004a99 !important;
+    -webkit-box-shadow: 5px 9px 43px 1px rgba(0, 0, 0, 0.18);
+    box-shadow: 5px 9px 43px 1px rgba(0, 0, 0, 0.18);
+    position: sticky;
+    top: 0px;
+}
+
+.bg-light>a {
+    color: #fff !important;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 16px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+#web_icon {
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
+#home {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    padding: 0%;
+}
+
+#home>a:hover {
+    color: #fff;
+}
+
+#create {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    padding: 0%;
+}
+
+#create>a:hover {
+    color: #fff;
+}
+
+#about {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    padding: 0%;
+}
+
+#about>a:hover {
+    color: #fff;
+}
+
+#background {
+    margin-top: -120px;
+    /* background: url(../images/root.jpg) no-repeat; */
+    background-size: cover;
+    padding-top: 111px;
+    height: 638px;
+    max-height: 1112px;
+}
+
+.card-img-top {
+    height: 0%;
+    vertical-align: middle;
+    border-style: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card {
+    border: none !important;
+    border-bottom: 3px solid #F2A20C !important;
+    border-radius: 20px;
+}
+
+body {
+    background: #eee;
+}
+
+input[type=text] {
+
+    background: #eee;
+    border: none !important;
+    box-shadow: 0px 1px 1px #ddd !important;
+}
+
+input[type=text]:focus {
+    background: #eee;
+    border: none !important;
+    box-shadow: 0px 4px 5px #ccc !important;
+}
+
+select,
+textarea {
+
+    background: #eee;
+    border: none !important;
+    box-shadow: 0px 1px 1px #ddd !important;
+}
+
+select,
+textarea:focus {
+    background: #eee;
+    border: none !important;
+    box-shadow: 0px 4px 5px #ccc !important;
+}
+
+
+.table .thead-light th {
+    color: #fff !important;
+    background: #F2A20C !important;
+    border: none !important;
+}
+
+.table tbody td a{
+    margin: 5px;
+
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.main {
+    position: relative;
+    background: url('../images/background/about.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.main .block {
+    position: absolute;
+    bottom: 0;
+    background: rgb(170, 147, 147);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.main h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.6em;
+    color: #dcdde1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.main p {
+    margin-top: 1em;
+    padding: 0;
+    font-size: 1em;
+    color: #dcdde1;
+}
+
+.main .btn {
+    background: #718093;
+    color: #fff;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main_cv img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    background-position: center;
+    padding: 220px 0 200px;
+}
+
+
+/* FOR FOOTER */
+
+#footer {
+    background: #00428a;
+    padding: 0 0 30px 0;
+    color: #eee;
+    font-size: 14px;
+}
+
+#footer .footer-top {
+    background: #004a99;
+    padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#footer .footer-top .footer-info h3 span {
+    color: #edbb00;
+}
+
+#footer .footer-top .footer-info p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #ecf5ff;
+}
+
+#footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    background: #0067d5;
+    color: #fff;
+}
+
+#footer .footer-top h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 8px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+    color: #ecf5ff;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+    color: #74b5fc;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+    border: 0;
+    padding: 6px 8px;
+    width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+    background: #007bff;
+    border: 0;
+    width: 35%;
+    padding: 6px 0;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+    background: #0062cc;
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer .credits {
+    text-align: center;
+    font-size: 13px;
+    color: #f1f7ff;
+}
+
+#footer .credits a {
+    color: #bfddfe;
+}
+
+#footer .credits a::hover {
+    color: #f1f7ff;
+}
