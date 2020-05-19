@@ -85,12 +85,12 @@
                                     readonly></td>
                         </tr>
                         <tr>
-                            <th scope="row">Firstname</th>
+                            <th scope="row">First Name</th>
                             <td><input type="text" class="form-control" id="firstname" name="firstname"
                                     placeholder="Enter First Name" readonly></td>
                         </tr>
                         <tr>
-                            <th scope="row">Lastname</th>
+                            <th scope="row">Last Name</th>
                             <td><input type="text" class="form-control" id="lastname" name="lastname"
                                     placeholder="Enter Last Name" readonly></td>
                         </tr>
