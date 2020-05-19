@@ -26,5 +26,8 @@ Route::post('/update/{id}', "StudentController@update");
 Route::get('/delete_home/{id}', "StudentController@delete_home");
 Route::get('/delete_create/{id}', "StudentController@delete_create");
 Route::get('/delete_edit/{id}', "StudentController@delete_edit");
-Route::get('/about', "StudentController@about");
 Route::get('/show/{id}', "StudentController@show");
+
+Route::get('/about', function(){
+    return view ('about');
+});

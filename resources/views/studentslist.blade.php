@@ -5,6 +5,9 @@
         <p class="card-text">You can find all information about Informatics Engineering students 2018 at Hasanuddin
             University</p>
 
+
+
+
         <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -37,8 +40,10 @@
                             data-firstname="{{$student->firstName}}" data-lastname="{{$student->lastName}}"
                             data-gender="{{$student->gender}}" data-age="{{$student->age}}"
                             data-religion="{{$student->religion}}" data-address="{{$student->address}}"
-                            data-speciality="{{$student->speciality}}" data-toggle="modal"
-                            data-target="#exampleModal-show" type="button" class="btn btn-primary btn-sm text-white">Show</a>
+                            data-speciality="{{$student->speciality}}"
+                            data-image="{{asset('images/imageProfile/'.$student->image)}}" data-toggle="modal"
+                            data-target="#exampleModal-show" type="button"
+                            class="btn btn-primary btn-sm text-white">Show</a>
 
 
                         <a href="{{ url('/edit/'.$student->id)}}" class="btn btn-sm btn-warning text-white">Edit</a>
@@ -71,6 +76,9 @@
             <div class="modal-body">
                 <table class='table borderless'>
                     <tbody>
+                        <tr>
+                            <img id="imageProfile" class="rounded mx-auto d-block">
+                        </tr>
                         <tr>
                             <th scope="row">Nim</th>
                             <td><input type="text" class="form-control" id="nim" name="nim" placeholder="Enter Nim"

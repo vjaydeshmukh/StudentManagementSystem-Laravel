@@ -57,7 +57,7 @@
                         @endif
 
                         <form action="{{ url('/store') }}" method="post" name="createForm"
-                            onsubmit="return(validate());">
+                            onsubmit="return(validate());" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Nim</label>
@@ -109,6 +109,11 @@
                                     placeholder="Enter Address" Require></textarea>
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Image</label>
+                                <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+
                             <input type="submit" class="btn btn-primary" value="Update">
                             <input type="reset" class="btn btn-warning" value="Reset">
                         </form>
@@ -136,7 +141,7 @@
                         </div>
                         @endif
                         <form action="{{ url('/update/'.$student->id) }}" method="post" name="createForm"
-                            onsubmit="return(validate());">
+                            onsubmit="return(validate());" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Nim</label>
@@ -192,6 +197,11 @@
                                     rows="3">{{ $student->address }}</textarea>
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Image</label>
+                                <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+
                             <input type="submit" class="btn btn-primary" value="Save">
                             <input type="reset" class="btn btn-warning" value="Reset">
                         </form>
@@ -200,29 +210,6 @@
             </section>
         </div>
     </div>
-
-
-    @elseif($layout == 'about')
-
-    <section class="main">
-        <div class="block">
-            <h2 class="animated fadeInDown" style="animation-delay: 1s">Fakultas Teknik Universitas Hasanuddin</h2>
-            <p class="animated fadeInDown" style="animation-delay: 2s">Fakultas Teknik Universitas Hasanuddin merupakan salah satu fakultas yang ada di Universitas Hasanuddin.
-                Didirikan pada tanggal 7 September 1960. Pada awalnya, kampus Fakultas Teknik berada di Kampus
-                Tamalanrea. Fakultas yang kini berdomisili di Kabupaten Gowa mengembangkan jaringan kerja sama nasional
-                dan internasional. Fakultas ini merupakan fakultas keempat yang ada di Universitas Hasanuddin.
-                Fakultas Teknik Universitas Hasanuddin berdiri sejak 7 September 1960, yang terdiri atas tiga jurusan,
-                yakni Teknik Sipil, Teknik Mesin dan Teknik Perkapalan. Pengembangan fakultas melalui pembukaan jurusan
-                baru tetap berjalan sampai bulan September 1963, saat terbentuk Jurusan Teknik Arsitektur dan Teknik
-                Elektro. Pembentukan Jurusan Teknik Geologi pada bulan September 1982 menutup rangkaian pengembangan
-                jurusan pada Fakultas Teknik.
-
-            </p>
-            <a class="btn animated fadeIn" style="animation-delay: 3s" href="https://eng.unhas.ac.id/fakultas/" target="_blank">Read More</a>
-        </div>
-    </section>
-
-    @include('cv')
 
     @endif
 
@@ -244,6 +231,7 @@
 
 
     <script>
+        
         $('#exampleModal-show').on('show.bs.modal', function (event) {
 
             var button = $(event.relatedTarget)
@@ -255,6 +243,7 @@
             var religion = button.data('religion')
             var address = button.data('address')
             var speciality = button.data('speciality')
+            var image = button.data('image')
             var student_id = button.data('student_id')
 
             var modal = $(this)
@@ -268,6 +257,7 @@
             modal.find('.modal-body #religion').val(religion);
             modal.find('.modal-body #address').val(address);
             modal.find('.modal-body #speciality').val(speciality);
+            modal.find('.modal-body #imageProfile').attr('src', image)
             modal.find('.modal-body #student_id').val(student_id);
         });
 

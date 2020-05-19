@@ -259,6 +259,11 @@ textarea:focus {
     border: none;
 }
 
+.modal-body #imageProfile {
+    max-width: 30%;
+    height: auto;
+}
+
 .main {
     position: relative;
     background: url('../images/background/about.jpg');

@@ -46,6 +46,16 @@ class StudentController extends Controller
         $student->religion = $request->input('religion');
         $student->address = $request->input('address');
         $student->speciality = $request->input('speciality');
+        
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); //getting image extension
+            $filename = time() . '.' . $extension;
+            $file -> move('images/imageProfile/', $filename);
+            $student->image = $filename;
+        }else{
+            $student->image = " ";
+        }
         $student->save();
         $students = Student::all();
         return view('student', ['students'=> $students, 'layout'=>'create', 'success'=>'ok']);
@@ -93,6 +103,17 @@ class StudentController extends Controller
         $student->religion = $request->input('religion');
         $student->address = $request->input('address');
         $student->speciality = $request->input('speciality');
+
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); //getting image extension
+            $filename = time() . '.' . $extension;
+            $file -> move('images/imageProfile/', $filename);
+            $student->image = $filename;
+        }else{
+            $student->image = " ";
+        }
+
         $student->save();
         $students = Student::all();
         return view('student', ['students'=>$students, 'student'=>$student, 'layout'=>'edit', 'success'=>'ok']);
@@ -110,7 +131,7 @@ class StudentController extends Controller
         if ($student != null) {
             // $student =Student::where('id', $id)->first();
             $student->delete();
-            return redirect('/#studentList');
+            return redirect('/#studentList')->with('success', 'delete_ok');
         }
     }
 
@@ -121,14 +142,7 @@ class StudentController extends Controller
             // $student =Student::where('id', $id)->first();
             $student->delete();
             $students = Student::all();
-            return view('student', ['students'=> $students, 'layout'=>'create']);
+            return view('student', ['students'=> $students, 'layout'=>'create', 'success'=>'pending']);
         }
-    }
-
-
-    public function about()
-    {
-        $students = Student::all();
-        return view('student', ['students'=> $students, 'layout'=>'about']);
     }
 }
