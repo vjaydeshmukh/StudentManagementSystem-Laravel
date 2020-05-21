@@ -42,10 +42,10 @@
     @elseif($layout == 'create')
     <div class="container-fluid mt-4">
         <div class="row">
-            <section class="col-md-7">
+            <section class="col-md-8">
                 @include("studentslist")
             </section>
-            <section class="col-md-5">
+            <section class="col-md-4">
 
                 <div class="card mb-3">
                     <div class="card-body">
@@ -128,10 +128,10 @@
     @elseif($layout == 'edit')
     <div class="container-fluid mt-4">
         <div class="row">
-            <section class="col-md-7">
+            <section class="col-md-8">
                 @include("studentslist")
             </section>
-            <section class="col-md-5">
+            <section class="col-md-4">
                 <div class="card mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Edit Data</h5>
@@ -199,7 +199,7 @@
 
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Image</label>
-                                <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <input value="{{asset('images/imageProfile/'.$student->image)}}" name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
                             </div>
 
                             <input type="submit" class="btn btn-primary" value="Save">

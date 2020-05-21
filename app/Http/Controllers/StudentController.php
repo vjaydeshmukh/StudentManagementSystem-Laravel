@@ -110,8 +110,6 @@ class StudentController extends Controller
             $filename = time() . '.' . $extension;
             $file -> move('images/imageProfile/', $filename);
             $student->image = $filename;
-        }else{
-            $student->image = " ";
         }
 
         $student->save();

@@ -1,14 +1,11 @@
-<div class="card mb-3">
+<div class="card mb-1">
     <img src="{{asset('images/imglist.jpg')}}" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">List of Student</h5>
         <p class="card-text">You can find all information about Informatics Engineering students 2018 at Hasanuddin
             University</p>
 
-
-
-
-        <table class="table">
+        <table class="table" id="tblist">
             <thead class="thead-light">
                 <tr>
                     <th scope="col">Nim</th>

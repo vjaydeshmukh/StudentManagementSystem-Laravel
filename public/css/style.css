@@ -243,14 +243,18 @@ textarea:focus {
     box-shadow: 0px 4px 5px #ccc !important;
 }
 
+#tblist{
+    width: 100%;
+}
 
-.table .thead-light th {
+#tblist .thead-light th {
     color: #fff !important;
     background: #F2A20C !important;
     border: none !important;
+    text-align: center;
 }
 
-.table tbody td a{
+#tblist tbody td a{
     margin: 5px;
 
 }
